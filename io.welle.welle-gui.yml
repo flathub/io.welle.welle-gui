@@ -63,6 +63,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/AlbrechtL/welle.io.git
-        commit: b10b45d57b152c5f2b7a37590ae2414d0697f79e
+        commit: 512558d1f8ac4c524d3c63e97510ea36c1bd7a70
       - type: patch
         path: patches/add-version-and-git-hash-to-appdata.patch
