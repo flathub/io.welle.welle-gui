@@ -57,6 +57,16 @@ modules:
         url: 'https://github.com/pothosware/SoapySDR.git'
         tag: soapy-sdr-0.8.1
 
+  - name: SoapyRemote
+    buildsystem: cmake-ninja
+    config-opts:
+      - '-DCMAKE_POLICY_VERSION_MINIMUM=3.5'
+      - '-Wno-dev'
+    sources:
+      - type: git
+        url: https://github.com/pothosware/SoapyRemote.git
+        tag: soapy-remote-0.5.2
+
   - name: welle.io
     buildsystem: cmake-ninja
     config-opts:
