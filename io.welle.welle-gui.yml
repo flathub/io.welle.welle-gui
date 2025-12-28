@@ -27,8 +27,8 @@ modules:
   - name: librtlsdr
     buildsystem: cmake-ninja
     config-opts:
-      - '-Wno-dev'
       - '-DDETACH_KERNEL_DRIVER=ON'
+      - '-Wno-dev'
     sources:
       - type: git
         url: 'https://gitea.osmocom.org/sdr/rtl-sdr.git'
@@ -46,6 +46,18 @@ modules:
         url: 'https://github.com/airspy/airspyone_host.git'
         tag: v1.0.10
 
+  - name: libhackrf
+    buildsystem: cmake-ninja
+    subdir: host
+    config-opts:
+      - '-DCMAKE_POLICY_VERSION_MINIMUM=3.5'
+      - '-DINSTALL_UDEV_RULE=OFF'
+      - '-Wno-dev'
+    sources:
+      - type: git
+        url: 'https://github.com/greatscottgadgets/hackrf.git'
+        tag: v2024.02.1
+
   - name: SoapySDR
     buildsystem: cmake-ninja
     config-opts:
@@ -56,6 +68,15 @@ modules:
       - type: git
         url: 'https://github.com/pothosware/SoapySDR.git'
         tag: soapy-sdr-0.8.1
+
+  - name: SoapyHackRF
+    buildsystem: cmake-ninja
+    config-opts:
+      - '-Wno-dev'
+    sources:
+      - type: git
+        url: 'https://github.com/pothosware/SoapyHackRF.git'
+        commit: 143ff5e7e0f786e341df8846c04e8273c5183c26
 
   - name: SoapyRemote
     buildsystem: cmake-ninja
