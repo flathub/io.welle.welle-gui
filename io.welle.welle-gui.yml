@@ -81,12 +81,11 @@ modules:
   - name: SoapyRemote
     buildsystem: cmake-ninja
     config-opts:
-      - '-DCMAKE_POLICY_VERSION_MINIMUM=3.5'
       - '-Wno-dev'
     sources:
       - type: git
-        url: https://github.com/pothosware/SoapyRemote.git
-        tag: soapy-remote-0.5.2
+        url: 'https://github.com/pothosware/SoapyRemote.git'
+        commit: 40c3ef9053b63885b7444ce7e9ef00d2c7964c9d
 
   - name: welle.io
     buildsystem: cmake-ninja
@@ -98,7 +97,7 @@ modules:
       - '-DSOAPYSDR=ON'
     sources:
       - type: git
-        url: https://github.com/AlbrechtL/welle.io.git
+        url: 'https://github.com/AlbrechtL/welle.io.git'
         commit: 512558d1f8ac4c524d3c63e97510ea36c1bd7a70
       - type: patch
         path: patches/add-version-and-git-hash-to-appdata.patch
