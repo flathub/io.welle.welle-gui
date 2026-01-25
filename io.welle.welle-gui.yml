@@ -50,13 +50,12 @@ modules:
     buildsystem: cmake-ninja
     subdir: host
     config-opts:
-      - '-DCMAKE_POLICY_VERSION_MINIMUM=3.5'
       - '-DINSTALL_UDEV_RULE=OFF'
       - '-Wno-dev'
     sources:
       - type: git
         url: 'https://github.com/greatscottgadgets/hackrf.git'
-        tag: v2024.02.1
+        tag: v2026.01.2
 
   - name: SoapySDR
     buildsystem: cmake-ninja
