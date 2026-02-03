@@ -55,7 +55,7 @@ modules:
     sources:
       - type: git
         url: 'https://github.com/greatscottgadgets/hackrf.git'
-        tag: v2026.01.2
+        tag: v2026.01.3
 
   - name: SoapySDR
     buildsystem: cmake-ninja
